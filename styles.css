@@ -1,0 +1,105 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: none;
+}
+
+
+#bg-video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    min-width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu {
+  background-color: none;
+  width: 100%;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-size: 18px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+
+}
+
+.menu ul li a:hover {
+  color: lightpink;
+}
+
+.menu ul li a.active {
+  background-color: #4CAF50;
+}
+
+/* Animation Example */
+.menu ul li a {
+  position: relative;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #4CAF50;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.menu ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.menu ul li a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #4CAF50;
+  top: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.menu ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.img{
+  margin-right: 4%;
+  margin-bottom: 0;
+  width: 48%;
+  vertical-align: middle;
+  display: inline-block;
+}
